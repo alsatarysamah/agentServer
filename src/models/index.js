@@ -65,8 +65,11 @@ const commentCollection = new DataCollection(commentModel);
 module.exports = {
   db: sequelize,
   users: users(sequelize, DataTypes),
+  userCollection:userCollection,
   itemCollection: itemCollection,
+  itemModel:itemModel,
   favoriteCollection: favoriteCollection,
+  favoriteModel:favoriteModel,
   orderCollection: orderCollection,
   commentCollection: commentCollection,
 };

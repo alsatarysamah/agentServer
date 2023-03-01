@@ -10,11 +10,11 @@ const userRouter = express.Router();
 
 
 
-userRouter.get("/user", bearer,acl("admin"),  getAll);
-userRouter.post("/user", bearer, acl("admin"), creatRecord);
-userRouter.put("/user/:id", bearer, acl("admin"), updating);
-userRouter.delete("/user/:id", bearer, acl("admin"), deleting);
-userRouter.get("/user/:id", bearer, acl("admin"), getOneRecored);
+userRouter.get("/user", bearer,  getAll);
+userRouter.post("/user", bearer,  creatRecord);
+userRouter.put("/user/:id", bearer,  updating);
+userRouter.delete("/user/:id", bearer,  deleting);
+userRouter.get("/user/:id", bearer, getOneRecored);
 
 ////////////////creat=insert////////////////////
 async function creatRecord(req, res) {
