@@ -9,7 +9,9 @@ const notFound = require("./error-handlers/404.js");
 const itemRouter = require("../src/router/item");
 const authRoutes = require("./router/authRouter");
 const userRoutes = require("./router/userRouter");
-const orderRouter=require("./router/order")
+const orderRouter=require("./router/order");
+const favRouter = require("./router/fav.js");
+const commentRouter = require("./router/comments.js");
 
 
 const app = express();
@@ -28,7 +30,8 @@ app.use(orderRouter)
 app.use(itemRouter)
 app.use(authRoutes)
 app.use(userRoutes)
-
+app.use(favRouter)
+app.use(commentRouter)
 
 
 // Catchalls
